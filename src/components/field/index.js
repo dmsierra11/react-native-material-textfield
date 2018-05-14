@@ -407,9 +407,7 @@ export default class TextField extends PureComponent {
       fontSize,
       textAlign,
 
-      color: (disabled || defaultVisible)?
-        baseColor:
-        textColor,
+      color: textColor,
 
       ...(props.multiline?
         {
