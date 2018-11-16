@@ -94,6 +94,7 @@ export default class TextField extends PureComponent {
 
     containerStyle: (ViewPropTypes || View.propTypes).style,
     inputContainerStyle: (ViewPropTypes || View.propTypes).style,
+    activeLineColor: PropTypes.string,
   };
 
   constructor(props) {
@@ -354,6 +355,7 @@ export default class TextField extends PureComponent {
       containerStyle,
       inputContainerStyle: inputContainerStyleOverrides,
       clearTextOnFocus,
+      activeLineColor,
       ...props
     } = this.props;
 
@@ -380,7 +382,7 @@ export default class TextField extends PureComponent {
       errorColor:
       focus.interpolate({
         inputRange: [-1, 0, 1],
-        outputRange: [errorColor, baseColor, tintColor],
+        outputRange: [errorColor, baseColor, activeLineColor || tintColor],
       });
 
     let borderBottomWidth = restricted?
