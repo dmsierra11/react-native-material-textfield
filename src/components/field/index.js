@@ -96,6 +96,7 @@ export default class TextField extends PureComponent {
     inputContainerStyle: (ViewPropTypes || View.propTypes).style,
     activeLineColor: PropTypes.string,
     inputLineHeight: PropTypes.number,
+    characterRestrictionColor: PropTypes.string,
   };
 
   constructor(props) {
@@ -358,6 +359,7 @@ export default class TextField extends PureComponent {
       clearTextOnFocus,
       activeLineColor,
       inputLineHeight,
+      characterRestrictionColor,
       ...props
     } = this.props;
 
@@ -503,7 +505,7 @@ export default class TextField extends PureComponent {
     };
 
     let counterProps = {
-      baseColor,
+      baseColor: characterRestrictionColor || baseColor,
       errorColor,
       count,
       limit,
