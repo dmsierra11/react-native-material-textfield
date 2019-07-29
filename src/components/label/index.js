@@ -116,7 +116,7 @@ export default class Label extends PureComponent {
         outputRange: [fontSize, activeFontSize],
       }),
 
-      color,
+      color: baseColor,
     };
 
     let containerStyle = {
