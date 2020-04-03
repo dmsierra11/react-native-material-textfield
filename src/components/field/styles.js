@@ -2,7 +2,11 @@ import { StyleSheet } from 'react-native';
 
 export default StyleSheet.create({
   inputContainer: {
+    flex: 1,
+    flexDirection: 'row',
+    alignItems: 'flex-end',
     backgroundColor: 'transparent',
+    overflow: 'hidden',
   },
 
   input: {
@@ -10,10 +14,20 @@ export default StyleSheet.create({
     padding: 0,
     margin: 0,
     flex: 1,
+
+    includeFontPadding: false,
+    textAlignVertical: 'top',
   },
 
   row: {
+    flex: 1,
     flexDirection: 'row',
+    alignItems: 'flex-end',
+  },
+
+  stack: {
+    flex: 1,
+    alignSelf: 'stretch',
   },
 
   flex: {
@@ -22,7 +36,5 @@ export default StyleSheet.create({
 
   accessory: {
     top: 2,
-    justifyContent: 'center',
-    alignSelf: 'flex-start',
   },
 });

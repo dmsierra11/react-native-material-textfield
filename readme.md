@@ -31,7 +31,7 @@ Material texfield with consistent behaviour on iOS and Android
 * Multiline text input
 * Character counter
 * Prefix and suffix
-* Accessory view
+* Accessory views
 * Helper text
 * RTL support
 * Pure javascript implementation
@@ -100,7 +100,8 @@ class Example extends Component {
  labelTextStyle        | Style for label inner Text component        |   Object | -
  titleTextStyle        | Style for title inner Text component        |   Object | -
  affixTextStyle        | Style for affix inner Text component        |   Object | -
- renderAccessory       | Render input accessory view                 | Function | -
+ renderLeftAccessory   | Render left input accessory view            | Function | -
+ renderRightAccessory  | Render right input accessory view           | Function | -
  onChangeText          | Change text callback                        | Function | -
  onFocus               | Focus callback                              | Function | -
  onBlur                | Blur callback                               | Function | -
@@ -116,7 +117,9 @@ Other [TextInput][rn-textinput] properties will also work
  clear()        | Clear text field              |       -
  value()        | Get current value             |  String
  isFocused()    | Get current focus state       | Boolean
+ isErrored()    | Get current error state       | Boolean
  isRestricted() | Get current restriction state | Boolean
+ setValue()     | Set current value             |       -
 
 ## Example
 
@@ -131,4 +134,4 @@ npm run ios # or npm run android
 
 BSD License
 
-Copyright 2017 Alexander Nazarov. All rights reserved.
+Copyright 2017-2019 Alexander Nazarov. All rights reserved.
